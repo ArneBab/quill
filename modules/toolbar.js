@@ -33,7 +33,7 @@ class Toolbar extends Module {
       this.attach(input);
     });
     this.quill.on(Quill.events.EDITOR_CHANGE, (type, range) => {
-      if (type === Quill.events.SELECTION_CHANGE) {
+      if (range != null && type === Quill.events.SELECTION_CHANGE) {
         this.update(range);
       }
     });
